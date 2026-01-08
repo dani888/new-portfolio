@@ -39,9 +39,9 @@ iframe {
   border: none;
 }
 .card {
-  border-radius: 10px;
+  border-radius: 1px;
   width: auto;
-  padding: 2.5%;
+  padding: 3.5%;
 }
 .mobilemail2 {
   display: none;
@@ -91,8 +91,8 @@ iframe {
     padding-top: 10px;
   }
   .card {
-    border-radius: 10px;
+    border-radius: 5px;
     width: auto;
-    padding: 5%;
+    padding: 15%;
   }
 }

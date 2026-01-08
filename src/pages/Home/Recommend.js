@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import M from "materialize-css";
 
 class Recommend extends Component {
+  
   componentDidMount() {
     var elems = document.querySelectorAll(".collapsible");
     M.Collapsible.init(elems);
@@ -9,12 +10,12 @@ class Recommend extends Component {
 
   render() {
     return (
-      <ul class="collapsible">
+      <ul className="collapsible">
         <li>
-          <div class="collapsible-header">
-            <i class="material-icons">person</i>Nina Kim, General Assembly TA
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Nina Kim, General Assembly TA
           </div>
-          <div class="collapsible-body">
+          <div className="collapsible-body">
             <span>
               "Daniel is naturally inquisitive and thoughtful in his ability to
               solve problems. I was always impressed by his diligence and
@@ -29,11 +30,11 @@ class Recommend extends Component {
           </div>
         </li>
         <li>
-          <div class="collapsible-header">
-            <i class="material-icons">person</i>Daniel Hill, General Assembly
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Daniel Hill, General Assembly
             Fellow
           </div>
-          <div class="collapsible-body">
+          <div className="collapsible-body">
             <span>
               "Daniel was a really strong and skilled companion all throughout
               the time we worked together. We worked on a full stack project
@@ -47,11 +48,11 @@ class Recommend extends Component {
           </div>
         </li>
         <li>
-          <div class="collapsible-header">
-            <i class="material-icons">person</i>Steve Braaksma, General Assembly
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Steve Braaksma, General Assembly
             Fellow
           </div>
-          <div class="collapsible-body">
+          <div className="collapsible-body">
             <span>
               "I had the pleasure of working with Daniel on our capstone project
               for General Assembly, a trip-planning app. It was an awesome
@@ -64,11 +65,11 @@ class Recommend extends Component {
           </div>
         </li>
         <li>
-          <div class="collapsible-header">
-            <i class="material-icons">person</i>Mario Recinos, General Assembly
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Mario Recinos, General Assembly
             Fellow
           </div>
-          <div class="collapsible-body">
+          <div className="collapsible-body">
             <span>
               "It was an excellent experience working with Daniel on the final
               capstone project at General Assembly. Daniel is well organized,

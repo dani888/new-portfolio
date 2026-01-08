@@ -39,14 +39,14 @@ const Home = (props) => {
         </div>
         <div className="flex">
           <div className="w3-container w3-center w3-animate-top">
-            <h2>
-              Welcome To <span id="colorD">Daniel's</span> Porfolio
-            </h2>
+            <h1 className="hero-title">
+            <b>Welcome To <span id="colorD">Daniel's</span> Portfolio</b>
+            </h1>
           </div>
           <div className="animated-title">
             <div className="text-top">
               <div>
-                <span>Software Engineer</span>
+                <span className="role">Software Engineer</span>
                 <span>Daniel Werminghausen</span>
               </div>
             </div>
@@ -60,36 +60,57 @@ const Home = (props) => {
             <br />
           </div>
         </div>
-        <div class="w3-container w3-center w3-animate-left">
-          <Button
-            className="homebut"
-            href="#section2"
-            variant="outlined"
-            size="large"
-          >
-            Technical Skill
-          </Button>
-          <br />
-          <br />
-        </div>
-        <div class="w3-container w3-center w3-animate-right">
-          <Link to="/projects">
-            <Button
-              className="homebut"
-              href="#section2"
-              variant="outlined"
-              size="large"
-            >
-              Projects
-            </Button>
-          </Link>
-        </div>
+        <Button
+        className="homebut"
+        href="#section2"
+        variant="outlined"
+        size="large"
+        sx={{
+          border: "2px solid black",
+          color: "black",
+          width: "220px",            // increase button width
+          whiteSpace: "normal",      // allow text wrap
+          padding: "10px 20px",
+          "&:hover": {
+            backgroundColor: "#007BFF",
+            color: "white",
+            border: "4px solid #007BFF",
+          },
+          transition: "all 0.3s ease",
+        }}
+      >
+        Technical Skill
+      </Button>
+      <br />
+      <br />
+  <Link to="/projects">
+    <Button
+      className="homebut"
+      variant="outlined"
+      size="large"
+      sx={{
+        border: "2px solid black",
+        color: "black",
+        minWidth: "220px",
+        whiteSpace: "nowrap",
+        padding: "10px 20px",
+        "&:hover": {
+          backgroundColor: "#007BFF",
+          color: "white",
+          border: "4px solid #007BFF",
+        },
+        transition: "all 0.3s ease",
+      }}
+    >
+      Projects
+    </Button>
+  </Link>
       </div>
       <div className="main" id="section2">
         <div className="column">
           <div className="col s12 m6">
             <div className="card">
-              <h4>Technical Skills:</h4>
+              <h4><b>TECHNICAL SKILLS</b></h4>
               <img
                 className="imghome"
                 alt="i"
@@ -192,11 +213,13 @@ const Home = (props) => {
       </div>
       {/* <br /> */}
       <div className="column">
-        <div className="col s12 m6">
-          <div className="card ">
-            <h4>Recommendations:</h4>
-            <Recommend />
-          </div>
+        <div className="homer2">
+          {/* <div className="col s12 m6"> */}
+            <div className="card">
+              <h4><b>RECOMMENDATIONS</b></h4>
+              <Recommend />
+            </div>
+          {/* </div> */}
         </div>
       </div>
     </>
