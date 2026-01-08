@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* needed for container min-height */
+  /* background: gray; */
+
+  /* font-family: arial, sans-serif;
+  font-size: small;
+  color: #666; */
+}
+
+main {
+  flex: 1 0 auto;
+}
+.centerfot {
+  padding-bottom: 15px;
+}
+.nav-wrapper {
+  display: flex;
+  background-color: #000000;
+  font-size: 1.2em;
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+}
+
+.nav-wrapper .hide-on-med-and-down li a {
+  font-size: 1.2rem;     /* text size */
+  font-weight: 700;     /* slightly bolder */
+  padding: 0 24px;      /* spacing between options */
+  height: 64px;         /* Materialize navbar height */
+  line-height: 64px;    /* vertically center text */
+}
+
+
+.hide-on-med-and-down a:hover:not(.active) {
+  background-color: rgba(0, 128, 255, 0.9);
+}
+/* .sidenav {
+  margin-top: 56px;
+  font-size: bold;
+
+} */
+p {
+  width: 100%;
+}
+.nav-wrapper .hide-on-med-and-down li a:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+.active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}

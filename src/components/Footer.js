@@ -1,0 +1,17 @@
+
+
+const Footer = () => {
+    return(
+        <footer className="page-footer grey darken-4">
+            {/* <div class="footer-copyright"> */}
+            <div className="container">
+                <div className="centerfot">
+                    © 2026 Daniel Werminghausen Portfolio
+                    {/* <a class="grey-text text-lighten-4 right" href="#!">More Links</a> */}
+                </div>
+            </div>
+        </footer>
+    )
+}
+
+export default Footer;

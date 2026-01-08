@@ -1,0 +1,98 @@
+.resume {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2065&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 95vh;
+  overflow: auto;
+  justify-items: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Varta", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.textbox {
+  max-width: 70%;
+  max-height: 1500px;
+  font-size: 17.5px;
+  background-color: rgb(255, 255, 255, 0.5);
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flexbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+iframe {
+  border-radius: 5px;
+  border: none;
+}
+.card {
+  border-radius: 10px;
+  width: auto;
+  padding: 2.5%;
+}
+.mobilemail2 {
+  display: none;
+}
+.mobilemail {
+  /* padding-left: 10%; */
+  font-size: 20px;
+}
+.imgresume {
+  display: none;
+}
+.imgresume2 {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 900px) {
+  iframe {
+    display: none;
+    /* width: 100%; */
+    /* zoom: 50; */
+  }
+  .mobilemail {
+    display: none;
+  }
+  .mobilemail2 {
+    display: block;
+    font-size: 13px;
+  }
+  .textbox {
+    max-width: 95%;
+  }
+  .imgresum {
+    height: 90%;
+    width: 75%;
+  }
+  .gmail {
+    margin-top: 0px;
+  }
+  .imgresume {
+    display: inline-block;
+    margin: 10px;
+  }
+  .imgresume2 {
+    display: none;
+  }
+  .github {
+    padding-top: 10px;
+  }
+  .card {
+    border-radius: 10px;
+    width: auto;
+    padding: 5%;
+  }
+}

@@ -1,0 +1,119 @@
+.projects {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1600132806608-231446b2e7af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: auto;
+  justify-items: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Varta", sans-serif;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074d9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+.textbox3 {
+  /* max-width: 100%; */
+  max-height: auto;
+  font-size: 17.5px;
+  background-color: rgb(255, 255, 255, 0.5);
+  text-align: center;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.projp {
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+}
+.lined {
+  width: 35%;
+  margin: auto;
+  margin-top: 10px;
+}
+.lined2 {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+}
+.sidenav {
+  background-color: #dcdcdc;
+  font-size: 20px;
+  margin-top: 56px;
+  font-size: bold;
+}
+.w3-animate-top {
+  position: relative;
+  animation: animatetop 1.6s;
+}
+h2 {
+  font-family: "Varta", sans-serif;
+}
+.imgproj {
+  margin-bottom: 10px;
+}
+.GAlogo {
+  margin: 2.5%;
+}
+
+@media only screen and (max-width: 800px) {
+  .textbox3 {
+    /* max-width: 100%; */
+    max-height: auto;
+    font-size: 17.5px;
+    background-color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .projp {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .imgproj {
+    width: 80%;
+    height: 20%;
+    border-radius: 1px;
+  }
+  .GAlogo {
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .projects {
+    overflow: auto;
+    height: auto;
+  }
+  .lined {
+    width: 60%;
+  }
+}
