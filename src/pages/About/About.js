@@ -13,22 +13,11 @@ const About = () => {
       <br />
       <div className="flex">
         <div className="textbox">
-          <h2>About Daniel</h2>
+          <h3><b>ABOUT DANIEL</b></h3>
           <div className="column">
             <div className="col s12 m6">
               <div className="card">
-                Hi my name is Daniel. I am a Software Engineer with a passion
-                developing websites. I am from Germany, but grew up in
-                Massachusetts Boston throughout most of my life. I am bilingual,
-                speaking fluent German and English. I enjoy to travel and to run
-                around Boston. My favorite source code editor is Visual Studio
-                and my favored Language is JavaScript. I have graduated with a
-                bachelor's degree in Computer Science from the University of
-                Massachusetts Boston. I have work experience as a Web Developer
-                at DreamingCode I also graduated from General Assembly's
-                Software Engineering Imersive Full-time course consisting of 420
-                hours. I want to join a team of passionate developers and
-                together make a positive difference for the world.
+                Hi, my name is Daniel. I am a Software Engineer with a passion for developing websites and building intuitive, user-friendly applications. Originally from Germany, I grew up in Boston, Massachusetts, and I am bilingual in German and English. I enjoy traveling and exploring Boston, and I have a particular enthusiasm for problem-solving through code. My preferred development tools include Visual Studio, and my primary programming language is JavaScript. I hold a Bachelor's degree in Computer Science from the University of Massachusetts Boston and have professional experience as a Web Developer at DreamingCode. Additionally, I completed General Assembly's Software Engineering Immersive, a 420-hour full-time program. I am eager to join a team of passionate developers where I can contribute my skills and collaborate to create meaningful, positive impact through technology.
               </div>
             </div>
           </div>
@@ -37,7 +26,7 @@ const About = () => {
         <Carousel />
 
         <div className="textbox">
-          <h2>What Im Working On</h2>
+          <h3><b>WHAT IM WORKING ON</b></h3>
           <div className="column">
             <div className="col s12 m6">
               <div className="card">

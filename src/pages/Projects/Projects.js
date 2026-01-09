@@ -29,7 +29,7 @@ const Projects = (props) => {
       <br />
       <div className="flex">
         <div className="textbox3">
-          <h2>Daniel's Projects</h2>
+          <h2><b>DANIEL'S PROJECTS</b></h2>
           <div class="column">
             <div class="col s12 m6">
               <div class="card">

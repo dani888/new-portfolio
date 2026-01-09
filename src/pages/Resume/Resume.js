@@ -1,12 +1,12 @@
-import Emailform from "./Emailform";
+// import Emailform from "./Emailform";
 
 import pdf from "../../public/images/Resume.pdf";
 import pdf2 from "../../public/images/Certification.pdf";
-import linkin from "../../public/images/Linkedin.png";
-import resum from "../../public/images/resume.io.png";
-import git from "../../public/images/Git_logo.png";
-import gmail from "../../public/images/Gmail_logo.png";
-import github from "../../public/images/Github_logo.png";
+// import linkin from "../../public/images/Linkedin.png";
+// import resum from "../../public/images/resume.io.png";
+// import git from "../../public/images/Git_logo.png";
+// import gmail from "../../public/images/Gmail_logo.png";
+// import github from "../../public/images/Github_logo.png";
 
 const Resume = (props) => {
   return (
@@ -15,29 +15,20 @@ const Resume = (props) => {
       <br />
       <div className="flex">
         <div className="textbox">
-          <h2 id="h1resume">Daniel Resume & Contact</h2>
+          <h3 id="h1resume"><b>DANIEL RESUME & CONTACT</b></h3>
           <div className="column">
             <div className="col s12 m6">
               <div className="card">
                 <div>
-                  Creative and open-minded software engineer with a passion and
-                  background in web development and computer science. An
-                  effective team player who strives to push myself and my peers
-                  into tackling big challenges. When I am not at the computer I
-                  can be found training for a half marathon, exploring new paths
-                  to run around in Boston. As a developer and as a runner I am
-                  excited by the challenge of constant innovation and finding
-                  ways to improve on yesterday's best. I believe software
-                  engineering and web development is a life-long learning
-                  process and I am eager to learn and adapt to new ever-changing
-                  requirements. I do not know how the future will evolve but I
-                  will always be ready to develop and grow with it.
+                  Software engineer with a strong background in web development and computer science. I’m a collaborative team player who enjoys tackling challenging problems and continuously improving my skills. I value lifelong learning and adapt quickly to new technologies and evolving requirements.
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <br />
+        <br />
         <br />
 
         <iframe
@@ -48,6 +39,8 @@ const Resume = (props) => {
         ></iframe>
 
         <br />
+        <br />
+        <br />
 
         <iframe
           title="GA_Certification"
@@ -55,8 +48,10 @@ const Resume = (props) => {
           width="70%"
           height="850px"
         ></iframe>
+        <br />
+        <br />
 
-        <div className="w3-container w3-center w3-animate-right resumec">
+        {/* <div className="w3-container w3-center w3-animate-right resumec">
           <a
             href="https:/https://resume.io/r/MMzUgbn97/r/"
             target="_blank"
@@ -190,7 +185,7 @@ const Resume = (props) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <br />
       </div>

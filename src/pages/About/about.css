@@ -1,20 +1,17 @@
 .about {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.7)
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
     ),
-    url("https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2065&q=80");
-  background-size: cover;
+    url("https://images.unsplash.com/photo-1496284575094-d5b92db3890d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;          
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 95vh;
+  background-position: center 55%; /* slightly lower than center */
   overflow: auto;
-  justify-items: center;
-  align-items: center;
-  font-size: 25px;
-  font-weight: bold;
   font-family: "Varta", sans-serif;
 }
+
 img {
   max-height: 220px;
   border-radius: 5px;
