@@ -57,3 +57,54 @@ p {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
+
+.sidenav-trigger.btn-flat {
+  color: white; /* Makes the hamburger icon white */
+}
+
+.sidenav-trigger.btn-flat .material-icons {
+  font-size: 2rem; /* Optional: adjust size */
+}
+
+/* Sidenav full background */
+.sidenav {
+  background-color: #212121 !important; /* grey darken-4 */
+  padding-top: 64px; /* avoid being behind fixed navbar */
+  width: 250px;
+}
+
+/* All links in sidenav (internal and external) */
+.sidenav li a {
+  color: white !important;           /* text white */
+  font-weight: 700 !important;       /* bold like desktop navbar */
+  font-size: 1.2rem !important;
+  height: 64px !important;           /* full row height */
+  line-height: 64px !important;      /* vertically centered */
+  display: block !important;         /* full row clickable */
+  padding: 0 24px !important;        /* horizontal spacing */
+  background-color: transparent !important;
+  text-decoration: none !important; /* remove underline if any */
+}
+
+/* Remove default Materialize ripple effect */
+.sidenav li a.waves-effect {
+  background: none !important;
+}
+
+/* Hover effect: full row highlight */
+.sidenav li a:hover {
+  background-color: #ffffff !important; /* white like desktop navbar active */
+  color: #000000 !important;            /* black text */
+}
+
+/* Active link highlight (for internal routes) */
+.sidenav li a.active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Optional: style horizontal rules in sidenav */
+.sidenav hr {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+

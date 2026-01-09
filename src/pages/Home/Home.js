@@ -39,9 +39,9 @@ const Home = (props) => {
         </div>
         <div className="flex">
           <div className="w3-container w3-center w3-animate-top">
-            <h1 className="hero-title">
-            <b>Welcome To <span id="colorD">Daniel's</span> Portfolio</b>
-            </h1>
+            <div className="hero-title">
+              <b>Welcome To <span id="colorD">Daniel's</span> Portfolio</b>
+            </div>
           </div>
           <div className="animated-title">
             <div className="text-top">

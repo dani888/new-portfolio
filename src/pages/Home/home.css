@@ -133,6 +133,47 @@ a {
   transform: translate(0, -100%);
 }
 
+@media (max-width: 768px) {
+  .animated-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    margin: 80px auto 0;
+    text-align: center;
+  }
+
+  .animated-title > div {
+    height: auto;          /* ✅ allow growth */
+    overflow: visible;     /* ✅ prevent clipping */
+    position: relative;
+  }
+
+  .animated-title > div div {
+    font-size: 8vw;        /* better mobile scaling */
+    position: relative;
+  }
+
+  .animated-title > div.text-top {
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .animated-title > div.text-bottom div {
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.animated-title span {
+  white-space: normal;
+  word-break: break-word;
+}
+
+
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -365,6 +406,7 @@ h4 {
 .hero-title {
   font-size: 5rem; /* normal h1 size for desktop */
 }
+
 @media only screen and (max-width: 1560px) {
   .homer {
     background-image: linear-gradient(
