@@ -93,3 +93,52 @@ iframe {
     padding: 15%;
   }
 }
+
+/* Desktop: show iframes, hide mobile buttons */
+.pdf-desktop {
+  display: block;
+  margin: 0 auto;
+}
+
+.pdf-mobile {
+  display: none;
+  text-align: center;
+  margin-top: 2rem; /* space below intro text */
+  position: relative; /* keep in flow but allow z-index */
+  z-index: 10; /* make sure it’s above background */
+}
+
+/* Mobile buttons */
+.pdf-mobile a {
+  display: inline-block;
+  width: 200px;
+  max-width: 90%;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  color: #fff; /* text color */
+  backdrop-filter: blur(5px); /* subtle blur behind button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.pdf-mobile a:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile: hide iframe, show buttons */
+@media (max-width: 768px) {
+  .pdf-desktop {
+    display: none;
+  }
+  .pdf-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
