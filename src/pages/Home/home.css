@@ -81,7 +81,7 @@ a {
   margin-top: 150px;
   font-family: "Varta", sans-serif;
   margin-left: 90px;
-  height: 50vmin;
+  height: 60vmin;
   left: 50%;
   position: absolute;
   top: 60%;
@@ -486,7 +486,7 @@ h4 {
     width: 85%;
   }
   .animated-title > div div {
-    font-size: 6.5vmin;
+    font-size: 6vmin;
     /* padding: 0vmin 0; */
     position: absolute;
   }

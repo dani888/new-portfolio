@@ -4,6 +4,7 @@ import DaysJS from "../../public/images/30DaysJS.jpg";
 import codewar from "../../public/images/codeware_logo.png";
 import linkin from "../../public/images/Linkedin.png";
 import freecodecamp from "../../public/images/freecodecamp.jpg";
+import leetcode from "../../public/images/leetcode_logo.png";
 
 import Carousel from "./Carousel";
 const About = () => {
@@ -32,8 +33,8 @@ const About = () => {
               <div className="card">
                 <div className="">
                   <p className="projp">
-                    Status: Looking for Employment as a Software Engineer |
-                    Front-end Developer. Check me out on{" "}
+                    <b>Status</b>: Looking for Employment. <br /> Software Engineer |
+                    Front-end Developer | Full-Stack Developer. {" "}
                     <a
                       className="underline"
                       target="_blank"
@@ -45,6 +46,28 @@ const About = () => {
                   </p>
                   <br />
                   <hr />
+                  <br />
+                  <Link
+                    to={{ pathname: "https://javascript30.com/" }}
+                    target="_blank"
+                  >
+                    <img
+                      className="imgabout"
+                      alt="i"
+                      src={leetcode}
+                      width="75"
+                      height="75"
+                    />
+                  </Link>
+                  <br />
+                  <p className="projp">
+                    Leet-Code Practice: I have been practicing coding problems
+                    regularly on Leet-Code to sharpen my problem-solving skills
+                    and prepare for technical interviews. 
+                  </p>
+                  <br />
+                  <hr />
+                  <br />
                   <Link
                     to={{ pathname: "https://javascript30.com/" }}
                     target="_blank"
@@ -63,7 +86,9 @@ const About = () => {
                     Coding challege. Any day I can find some spare time, I
                     attempt one problem.
                   </p>
+                  <br />
                   <hr />
+                  <br />
                   <Link
                     to={{ pathname: "https://www.codewars.com/users/Danw1" }}
                     target="_blank"
@@ -85,6 +110,7 @@ const About = () => {
                   </p>
                   <br />
                   <hr />
+                  <br />
                   <Link
                     to={{ pathname: "https://www.freecodecamp.org/" }}
                     target="_blank"
@@ -107,6 +133,7 @@ const About = () => {
                   </p>
                   <br />
                   <hr />
+                  <br />
                   <Link
                     to={{ pathname: "https://www.linkedin.com/learning/" }}
                     target="_blank"

@@ -13,6 +13,10 @@ import PostgreSQL from "../../public/images/postgresql.png";
 import material from "../../public/images/materialize.png";
 import firebase from "../../public/images/firebase.png";
 import Git from "../../public/images/Git_logo.png";
+import ts from "../../public/images/typescript_logo.png";
+import tailwind from "../../public/images/tailwind_logo.png";
+import plsql from "../../public/images/plsql_logo.png";
+import jquery from "../../public/images/jquery_logo.png";
 
 import Recommend from "./Recommend";
 
@@ -203,6 +207,38 @@ const Home = (props) => {
                 className="imghome"
                 alt="i"
                 src={Git}
+                width="100"
+                height="100"
+              />
+              &nbsp;&nbsp;&nbsp;
+              <img
+                className="imghome"
+                alt="i"
+                src={ts}
+                width="100"
+                height="100"
+              />
+              &nbsp;&nbsp;&nbsp;
+              <img
+                className="imghome"
+                alt="i"
+                src={tailwind}
+                width="100"
+                height="100"
+              />
+              &nbsp;&nbsp;&nbsp;
+              <img
+                className="imghome"
+                alt="i"
+                src={plsql}
+                width="100"
+                height="100"
+              />
+              &nbsp;&nbsp;&nbsp;
+              <img
+                className="imghome"
+                alt="i"
+                src={jquery}
                 width="100"
                 height="100"
               />
