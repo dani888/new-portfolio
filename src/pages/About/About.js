@@ -18,7 +18,56 @@ const About = () => {
           <div className="column">
             <div className="col s12 m6">
               <div className="card">
-                Hi, my name is Daniel. I am a Software Engineer with a passion for developing websites and building intuitive, user-friendly applications. Originally from Germany, I grew up in Boston, Massachusetts, and I am bilingual in German and English. I enjoy traveling and exploring Boston, and I have a particular enthusiasm for problem-solving through code. My preferred development tools include Visual Studio, and my primary programming language is JavaScript. I hold a Bachelor's degree in Computer Science from the University of Massachusetts Boston and have professional experience as a Web Developer at DreamingCode. Additionally, I completed General Assembly's Software Engineering Immersive, a 420-hour full-time program. I am eager to join a team of passionate developers where I can contribute my skills and collaborate to create meaningful, positive impact through technology.
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "40px 20px",
+                    maxWidth: "900px",
+                    margin: "0 auto",
+                    backgroundColor: "#f9f9f9",
+                    borderRadius: "12px",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                    lineHeight: "1.7",
+                  }}
+                >
+                  <p style={{ fontSize: "1.2rem", marginBottom: "30px", textAlign: "center", fontWeight: "500" }}>
+                    Hi! My name is Daniel. I’m a Software Engineer with a passion for creating websites and building intuitive, user-friendly applications.
+                  </p>
+
+                  <ul style={{ listStyleType: "none", padding: 0, width: "100%" }}>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Background:</strong> Originally from Germany, raised in Boston, Massachusetts
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Languages:</strong> Bilingual in German and English
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Interests:</strong> Traveling, exploring Boston, problem-solving through code
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Development Tools:</strong> Visual Studio
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Primary Programming Language:</strong> JavaScript
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Education:</strong>
+                      <ul style={{ listStyleType: "circle", paddingLeft: "20px", marginTop: "5px" }}>
+                        <li>Bachelor’s degree in Computer Science, University of Massachusetts Boston</li>
+                        <li>Completed General Assembly’s Software Engineering Immersive (420-hour full-time program)</li>
+                      </ul>
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Professional Experience:</strong> Web Developer at DreamingCode
+                    </li>
+                    <li style={{ marginBottom: "15px" }}>
+                      <strong style={{ fontWeight: "700" }}>Career Goals:</strong> Eager to join a team of passionate developers to contribute skills and collaborate on meaningful, positive impact through technology
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

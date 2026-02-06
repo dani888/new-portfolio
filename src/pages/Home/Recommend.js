@@ -13,6 +13,52 @@ class Recommend extends Component {
       <ul className="collapsible">
         <li>
           <div className="collapsible-header">
+            <i className="material-icons">person</i>Jacob Taormina, Senior Software Engineer @ Bonterra
+          </div>
+          <div className="collapsible-body">
+            <span>
+              "Daniel was a great coworker and someone I really enjoyed working with. He was thoughtful 
+              in how he approached problems, asked insightful questions, and consistently took the time 
+              to understand requirements before jumping into solutions. He communicated clearly, collaborated 
+              well with the team, and was always willing to help when others needed support. Daniel brought 
+              a positive attitude to the team and took pride in his work. Working alongside him made the team 
+              better, and I wish him nothing but success in whatever he takes on next."
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Harini Rajappa, Director of Engineering @ Bonterra
+          </div>
+          <div className="collapsible-body">
+            <span>
+              "Daniel was part of my team and contributed to some of our top client projects. 
+              I truly appreciated his positive attitude, thoughtful communication, and collaborative spirit. 
+              He was a pleasure to work with, and I wish him every success in his next opportunity."
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="collapsible-header">
+            <i className="material-icons">person</i>Paul Cadle, Manager @ Bonterra
+          </div>
+          <div className="collapsible-body">
+            <span>
+              "Daniel was a pleasure to work with at Bonterra. He always prioritized 
+              what was best for the customer, and valued the success of our team as a 
+              whole. I admire his diligence in his work, and he routinely would take 
+              on extra tasks that were critical to achieving the team and department goals.
+              Daniel had positive relationships with all of the developers on our team as 
+              well as cross-functionally, and worked well with all involved parties to 
+              decipher unclear information/requirements and obtain what was needed to 
+              produce a quality product. I had fun collaborating with Daniel, and really enjoyed 
+              seeing his growth throughout our time together at Bonterra. I wish Daniel all the 
+              best in his next position!"
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="collapsible-header">
             <i className="material-icons">person</i>Nina Kim, General Assembly TA
           </div>
           <div className="collapsible-body">

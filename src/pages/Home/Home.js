@@ -109,6 +109,32 @@ const Home = (props) => {
       Projects
     </Button>
   </Link>
+   <br />
+   <br />
+  <Button
+  className="homebut"
+  href="#section3"
+  variant="outlined"
+  size="large"
+  sx={{
+    border: "2px solid black",
+    color: "black",
+    width: "220px",            // keep original width
+    whiteSpace: "normal",      // allow text wrap
+    padding: "10px 20px",
+    "&:hover": {
+      backgroundColor: "#007BFF",
+      color: "white",
+      border: "4px solid #007BFF",
+    },
+    transition: "all 0.3s ease",
+    display: { xs: "none", sm: "inline-flex" }, // hide on xs (phones), show on sm+
+  }}
+>
+  Recommendations
+</Button>
+
+  
       </div>
       <div className="main" id="section2">
         <div className="column">
@@ -248,11 +274,12 @@ const Home = (props) => {
         </div>
       </div>
       {/* <br /> */}
-      <div className="column">
+      <div className="column" id="section3">
         <div className="homer2">
           {/* <div className="col s12 m6"> */}
             <div className="card">
               <h4><b>RECOMMENDATIONS</b></h4>
+              <center>Click to View Recommendations</center>
               <Recommend />
             </div>
           {/* </div> */}
