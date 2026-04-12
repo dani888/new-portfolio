@@ -1,3 +1,4 @@
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 import JS       from "../../public/images/JS_logo.png";
@@ -42,11 +43,28 @@ const HeroBackground =
   "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=2670&auto=format&fit=crop";
 
 const Home = () => {
+  const [glow, setGlow] = useState({ x: 50, y: 50, active: false });
+
+  const handleMouseMove = useCallback((e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setGlow({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top) / rect.height) * 100,
+      active: true,
+    });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setGlow((g) => ({ ...g, active: false }));
+  }, []);
+
   return (
     <>
       {/* ── Hero Section ── */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pb-24"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         style={{
           backgroundImage: `linear-gradient(rgba(5,15,30,0.65), rgba(5,15,30,0.78)), url(${HeroBackground})`,
           backgroundSize: "cover",
@@ -54,12 +72,16 @@ const Home = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Snowflakes */}
-        <div aria-hidden="true">
-          {["❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆"].map((flake, i) => (
-            <span key={i} className="snowflake">{flake}</span>
-          ))}
-        </div>
+        {/* Mouse spotlight glow */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: `radial-gradient(circle 550px at ${glow.x}% ${glow.y}%, rgba(59,130,246,0.18) 0%, transparent 70%)`,
+            opacity: glow.active ? 1 : 0,
+            transition: "opacity 0.4s ease",
+          }}
+        />
 
         {/* ── Desktop: title + buttons in normal flow (hidden on mobile) ── */}
         <div className="hidden md:flex flex-col relative z-10 items-center text-center px-8 w-full max-w-5xl">
@@ -117,8 +139,8 @@ const Home = () => {
           <div className="flex flex-col w-full max-w-xs gap-3 pt-2">
             <a
               href="#section2"
-              className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm tracking-wide
-                         hover:bg-blue-700 transition-colors duration-200 text-center"
+              className="w-full py-3 rounded-xl border-2 border-white/60 text-white font-semibold text-sm tracking-wide
+                         hover:bg-white/10 transition-colors duration-200 text-center"
             >
               Technical Skills
             </a>
@@ -138,6 +160,29 @@ const Home = () => {
             </a>
           </div>
         </div>
+
+        {/* ── Scroll indicator — always visible at bottom center ── */}
+        <a
+          href="#section2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 group px-4 py-2"
+          aria-label="Scroll down"
+        >
+          <span className="text-white/60 text-xs tracking-widest uppercase group-hover:text-white transition-colors duration-200">
+            Scroll
+          </span>
+          <div className="relative w-0.5 h-10 sm:h-12 bg-white/25 overflow-hidden rounded-full">
+            <div
+              className="absolute top-0 left-0 w-full bg-white rounded-full animate-scroll-line"
+              style={{ height: "40%" }}
+            />
+          </div>
+          <svg
+            className="w-4 h-4 text-white/50 group-hover:text-white transition-colors duration-200 -mt-1"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
       </section>
 
       {/* ── Technical Skills ── */}

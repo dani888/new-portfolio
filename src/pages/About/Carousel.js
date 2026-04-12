@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import one   from "../../public/images/image1.jpg";
 import two   from "../../public/images/image3.jpg";
 import three from "../../public/images/image2.jpg";
@@ -18,6 +18,11 @@ const Carousel = () => {
 
   const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
   const next = () => setCurrent((c) => (c + 1) % images.length);
+
+  useEffect(() => {
+    const timer = setInterval(next, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="w-full max-w-lg mx-auto">

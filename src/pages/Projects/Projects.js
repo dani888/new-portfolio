@@ -14,12 +14,36 @@ import p38  from "../../public/images/Screenshot11.png";
 import p39  from "../../public/images/image7.jpg";
 import p40  from "../../public/images/Screenshot12.png";
 
-import GA      from "../../public/images/GA_logo.jpg";
-import DaysJS  from "../../public/images/30DaysJS.jpg";
-import UMBlogo from "../../public/images/UMBlogo.jpg";
+import GA        from "../../public/images/GA_logo.jpg";
+import DaysJS    from "../../public/images/30DaysJS.jpg";
+import UMBlogo   from "../../public/images/UMBlogo.jpg";
+import air600Img from "../../public/images/600air_screenshot.png";
 
 /* ── Data ── */
 const categories = [
+  {
+    logo: p39,
+    logoHref: null,
+    title: "Professional & Personal Projects",
+    projects: [
+      {
+        img: air600Img,
+        name: "600 AirSuspension Website",
+        live: "https://600airdemo.netlify.app/",
+        github: null,
+        desc: "Modernizing the 600 AirSuspension website — a full rebuild focused on performance, design, and user experience.",
+        tech: ["React 19", "Vite", "React Router DOM v7", "Tailwind CSS v4", "JavaScript (JSX)"],
+      },
+      {
+        img: p40,
+        name: "Job Finder API",
+        live: null,
+        github: "https://github.com/dani888/job-finder",
+        desc: "A React app that scrapes job sites (LinkedIn, Glassdoor, and more), stores results in PostgreSQL, and displays them in a formatted table.",
+        tech: ["PostgreSQL", "React", "JavaScript"],
+      },
+    ],
+  },
   {
     logo: GA,
     logoHref: "https://generalassemb.ly/",
@@ -146,74 +170,42 @@ const categories = [
       },
     ],
   },
-  {
-    logo: p39,
-    logoHref: null,
-    title: "Personal Projects",
-    projects: [
-      {
-        img: p40,
-        name: "Job Finder API",
-        live: null,
-        github: "https://github.com/dani888/job-finder",
-        desc: "A React app that scrapes job sites (LinkedIn, Glassdoor, and more), stores results in PostgreSQL, and displays them in a formatted table.",
-        tech: ["PostgreSQL", "React", "JavaScript"],
-      },
-    ],
-  },
 ];
 
 /* ── Sub-components ── */
 const TechBadge = ({ label }) => (
-  <span className="px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs rounded-full font-medium">
+  <span className="px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs rounded-full font-medium whitespace-nowrap">
     {label}
   </span>
 );
 
+/* Regular card — used in multi-project grids */
 const ProjectCard = ({ img, name, note, live, github, desc, tech }) => (
   <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg
                   transition-all duration-200 hover:-translate-y-1 flex flex-col h-full">
-    {/* Image */}
-    <div className="h-44 overflow-hidden bg-gray-100 flex-shrink-0">
+    <div className="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
       <img src={img} alt={name} className="w-full h-full object-cover" />
     </div>
-
-    {/* Body */}
     <div className="p-5 flex flex-col flex-1">
       <h3 className="font-bold text-gray-900 text-sm mb-1">{name}</h3>
-      {note && (
-        <p className="text-xs text-amber-600 font-medium italic mb-2">{note}</p>
-      )}
-      {/* Description grows to fill available space */}
+      {note && <p className="text-xs text-amber-600 font-medium italic mb-2">{note}</p>}
       <p className="text-gray-500 text-xs leading-relaxed flex-1">{desc}</p>
-
-      {/* Tech badges */}
       <div className="flex flex-wrap gap-1.5 mt-3">
         {tech.map((t) => <TechBadge key={t} label={t} />)}
       </div>
-
-      {/* Buttons pinned to bottom */}
       {(live || github) && (
         <div className="flex gap-2 mt-4">
           {live && (
-            <a
-              href={live}
-              target="_blank"
-              rel="noreferrer"
+            <a href={live} target="_blank" rel="noreferrer"
               className="flex-1 text-center py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg
-                         hover:bg-blue-700 transition-colors duration-200"
-            >
+                         hover:bg-blue-700 transition-colors duration-200">
               Live Demo
             </a>
           )}
           {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noreferrer"
+            <a href={github} target="_blank" rel="noreferrer"
               className="flex-1 text-center py-2 bg-gray-800 text-white text-xs font-semibold rounded-lg
-                         hover:bg-gray-900 transition-colors duration-200"
-            >
+                         hover:bg-gray-900 transition-colors duration-200">
               GitHub
             </a>
           )}
@@ -222,6 +214,58 @@ const ProjectCard = ({ img, name, note, live, github, desc, tech }) => (
     </div>
   </div>
 );
+
+/* Featured card — used when a category has only one project */
+const FeaturedCard = ({ img, name, note, live, github, desc, tech }) => (
+  <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg
+                  transition-all duration-200 flex flex-col sm:flex-row">
+    {/* Image — top on mobile, left side on desktop */}
+    <div className="sm:w-5/12 aspect-video sm:aspect-auto overflow-hidden bg-gray-100 flex-shrink-0">
+      <img src={img} alt={name} className="w-full h-full object-cover" />
+    </div>
+    {/* Content */}
+    <div className="p-6 flex flex-col flex-1 justify-between">
+      <div>
+        <h3 className="font-bold text-gray-900 text-base mb-2">{name}</h3>
+        {note && <p className="text-xs text-amber-600 font-medium italic mb-2">{note}</p>}
+        <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+      </div>
+      <div>
+        <div className="flex flex-wrap gap-1.5 mt-4">
+          {tech.map((t) => <TechBadge key={t} label={t} />)}
+        </div>
+        {(live || github) && (
+          <div className="flex gap-2 mt-5">
+            {live && (
+              <a href={live} target="_blank" rel="noreferrer"
+                className="flex-1 text-center py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-lg
+                           hover:bg-blue-700 transition-colors duration-200">
+                Live Demo
+              </a>
+            )}
+            {github && (
+              <a href={github} target="_blank" rel="noreferrer"
+                className="flex-1 text-center py-2.5 bg-gray-800 text-white text-sm font-semibold rounded-lg
+                           hover:bg-gray-900 transition-colors duration-200">
+                GitHub
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+);
+
+/* Grid columns based on item count */
+const gridCols = (count) => {
+  if (count === 1) return "";                          // featured card, no grid needed
+  if (count === 2) return "grid-cols-1 sm:grid-cols-2";
+  if (count === 3) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+  if (count === 4) return "grid-cols-1 sm:grid-cols-2";
+  if (count >= 5)  return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+  return "grid-cols-1 sm:grid-cols-2";
+};
 
 const bgProjects =
   "https://images.unsplash.com/photo-1600132806608-231446b2e7af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80";
@@ -240,7 +284,7 @@ const Projects = () => {
     >
       <div className="max-w-6xl mx-auto space-y-16">
 
-        {/* Heading */}
+        {/* Page heading */}
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Daniel's Projects</h1>
           <div className="w-16 h-1 bg-blue-500 mx-auto mt-3 rounded-full" />
@@ -249,22 +293,18 @@ const Projects = () => {
         {/* Categories */}
         {categories.map(({ logo, logoHref, title, projects }) => (
           <section key={title}>
+
             {/* Category header */}
             <div className="flex items-center gap-4 mb-8">
-              {logoHref ? (
+              {logo && logoHref && (
                 <a href={logoHref} target="_blank" rel="noreferrer">
-                  <img
-                    src={logo}
-                    alt={title}
-                    className="w-12 h-12 rounded-xl object-contain border border-gray-200 bg-white p-1 shadow-sm"
-                  />
+                  <img src={logo} alt={title}
+                    className="w-12 h-12 rounded-xl object-contain border border-gray-200 bg-white p-1 shadow-sm" />
                 </a>
-              ) : (
-                <img
-                  src={logo}
-                  alt={title}
-                  className="w-12 h-12 rounded-xl object-cover border border-gray-200 shadow-sm"
-                />
+              )}
+              {logo && !logoHref && (
+                <img src={logo} alt={title}
+                  className="w-12 h-12 rounded-xl object-cover border border-gray-200 shadow-sm" />
               )}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
@@ -272,18 +312,17 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Project grid */}
-            <div className={`grid gap-6 items-stretch ${
-              projects.length === 1
-                ? "max-w-sm"
-                : projects.length === 3 || projects.length === 6
-                ? "sm:grid-cols-3"
-                : "sm:grid-cols-2"
-            }`}>
-              {projects.map((proj) => (
-                <ProjectCard key={proj.name} {...proj} />
-              ))}
-            </div>
+            {/* Single project → featured horizontal card */}
+            {projects.length === 1 ? (
+              <FeaturedCard {...projects[0]} />
+            ) : (
+              <div className={`grid gap-6 items-stretch ${gridCols(projects.length)}`}>
+                {projects.map((proj) => (
+                  <ProjectCard key={proj.name} {...proj} />
+                ))}
+              </div>
+            )}
+
           </section>
         ))}
 
