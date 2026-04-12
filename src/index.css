@@ -1,110 +1,119 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Varta:wght@300;400;600;700&display=swap");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* needed for container min-height */
-  /* background: gray; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  /* font-family: arial, sans-serif;
-  font-size: small;
-  color: #666; */
+html {
+  scroll-behavior: smooth;
 }
 
-main {
-  flex: 1 0 auto;
+/* ── Animated hero title ── */
+@keyframes showTopText {
+  0%          { transform: translate3d(0, 100%, 0); }
+  40%, 60%    { transform: translate3d(0, 50%, 0); }
+  100%        { transform: translate3d(0, 0, 0); }
 }
-.centerfot {
-  padding-bottom: 15px;
+@keyframes showBottomText {
+  0%   { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
-.nav-wrapper {
-  display: flex;
-  background-color: #000000;
-  font-size: 1.2em;
+
+/* ── Animated hero title — flow-based, fully responsive ── */
+.animated-title {
+  font-family: 'Varta', sans-serif;
+  color: #ffffff;
   width: 100%;
+  text-align: center;
+}
+
+/* top section: clips animation sliding up from below */
+.animated-title .text-top {
+  overflow: hidden;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* bottom section: clips animation sliding down from above */
+.animated-title .text-bottom {
+  overflow: hidden;
+}
+
+/* slide-up animation for name block */
+.animated-title .text-top > div {
+  animation: showTopText 1s ease forwards;
+  animation-delay: 0.5s;
+  transform: translateY(110%);
+}
+
+/* "Software Engineer" label */
+.animated-title .text-top > div .role {
   display: block;
+  color: #93c5fd;
+  font-size: clamp(0.75rem, 1.1vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+/* "Daniel Werminghausen" name */
+.animated-title .text-top > div span:last-child {
+  display: block;
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-shadow: 0 3px 24px rgba(0,0,0,0.6);
+}
+
+/* slide-down animation for quote */
+.animated-title .text-bottom > div {
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  animation: showBottomText 0.5s ease forwards;
+  animation-delay: 1.75s;
+  transform: translateY(-110%);
+}
+
+/* ── Snowflakes ── */
+.snowflake {
+  color: #fff;
+  font-size: 1.1em;
+  text-shadow: 0 0 6px #3b82f6;
   position: fixed;
-  top: 0;
-  z-index: 1030;
+  top: -10%;
+  z-index: 9999;
+  user-select: none;
+  pointer-events: none;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
 }
-
-.nav-wrapper .hide-on-med-and-down li a {
-  font-size: 1.2rem;     /* text size */
-  font-weight: 700;     /* slightly bolder */
-  padding: 0 24px;      /* spacing between options */
-  height: 64px;         /* Materialize navbar height */
-  line-height: 64px;    /* vertically center text */
+@keyframes snowflakes-fall {
+  0%   { top: -10%; }
+  100% { top: 100%; }
 }
-
-
-.hide-on-med-and-down a:hover:not(.active) {
-  background-color: rgba(0, 128, 255, 0.9);
+@keyframes snowflakes-shake {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(80px); }
 }
-/* .sidenav {
-  margin-top: 56px;
-  font-size: bold;
-
-} */
-p {
-  width: 100%;
-}
-.nav-wrapper .hide-on-med-and-down li a:hover {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-.active {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-.sidenav-trigger.btn-flat {
-  color: white; /* Makes the hamburger icon white */
-}
-
-.sidenav-trigger.btn-flat .material-icons {
-  font-size: 2rem; /* Optional: adjust size */
-}
-
-/* Sidenav full background */
-.sidenav {
-  background-color: #212121 !important; /* grey darken-4 */
-  padding-top: 64px; /* avoid being behind fixed navbar */
-  width: 250px;
-}
-
-/* All links in sidenav (internal and external) */
-.sidenav li a {
-  color: white !important;           /* text white */
-  font-weight: 700 !important;       /* bold like desktop navbar */
-  font-size: 1.2rem !important;
-  height: 64px !important;           /* full row height */
-  line-height: 64px !important;      /* vertically centered */
-  display: block !important;         /* full row clickable */
-  padding: 0 24px !important;        /* horizontal spacing */
-  background-color: transparent !important;
-  text-decoration: none !important; /* remove underline if any */
-}
-
-/* Remove default Materialize ripple effect */
-.sidenav li a.waves-effect {
-  background: none !important;
-}
-
-/* Hover effect: full row highlight */
-.sidenav li a:hover {
-  background-color: #ffffff !important; /* white like desktop navbar active */
-  color: #000000 !important;            /* black text */
-}
-
-/* Active link highlight (for internal routes) */
-.sidenav li a.active {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Optional: style horizontal rules in sidenav */
-.sidenav hr {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
+.snowflake:nth-of-type(1)  { left:  1%; animation-delay: 0s,    0s;    }
+.snowflake:nth-of-type(2)  { left: 10%; animation-delay: 1s,    1s;    }
+.snowflake:nth-of-type(3)  { left: 20%; animation-delay: 6s,    0.5s;  }
+.snowflake:nth-of-type(4)  { left: 30%; animation-delay: 4s,    2s;    }
+.snowflake:nth-of-type(5)  { left: 40%; animation-delay: 2s,    2s;    }
+.snowflake:nth-of-type(6)  { left: 50%; animation-delay: 8s,    3s;    }
+.snowflake:nth-of-type(7)  { left: 60%; animation-delay: 6s,    2s;    }
+.snowflake:nth-of-type(8)  { left: 70%; animation-delay: 2.5s,  1s;    }
+.snowflake:nth-of-type(9)  { left: 80%; animation-delay: 1s,    0s;    }
+.snowflake:nth-of-type(10) { left: 90%; animation-delay: 3s,    1.5s;  }
+.snowflake:nth-of-type(11) { left: 25%; animation-delay: 2s,    0s;    }
+.snowflake:nth-of-type(12) { left: 65%; animation-delay: 4s,    2.5s;  }

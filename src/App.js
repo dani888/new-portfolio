@@ -7,22 +7,18 @@ import Resume from './pages/Resume/Resume';
 import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 
-import './App.css';
-import './pages/Home/home.css';
-import './pages/Resume/resume.css';
-import './pages/About/about.css';
-import './pages/Projects/projects.css';
-
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col min-h-screen font-sans">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <main className="flex-1 pt-16">
+        <Routes>
+          <Route path="/"        element={<Home />} />
+          <Route path="/resume"  element={<Resume />} />
+          <Route path="/about"   element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

@@ -1,581 +1,292 @@
-import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
+import p33  from "../../public/images/Screenshot6.png";
+import p3   from "../../public/images/Screenshot1.png";
+import p31  from "../../public/images/Screenshot4.png";
+import p32  from "../../public/images/Screenshot5.png";
+import p34  from "../../public/images/Screenshot7.png";
+import p35  from "../../public/images/Screenshot8.png";
+import p41  from "../../public/images/Screenshot13.png";
+import p42  from "../../public/images/Screenshot14.png";
+import p43  from "../../public/images/Screenshot15.png";
+import p44  from "../../public/images/Screenshot16.png";
+import p36  from "../../public/images/Screenshot9.png";
+import p37  from "../../public/images/Screenshot10.png";
+import p38  from "../../public/images/Screenshot11.png";
+import p39  from "../../public/images/image7.jpg";
+import p40  from "../../public/images/Screenshot12.png";
 
-import p3 from "../../public/images/Screenshot1.png";
-import p31 from "../../public/images/Screenshot4.png";
-import p32 from "../../public/images/Screenshot5.png";
-import p33 from "../../public/images/Screenshot6.png";
-import p34 from "../../public/images/Screenshot7.png";
-import p35 from "../../public/images/Screenshot8.png";
-import p36 from "../../public/images/Screenshot9.png";
-import p37 from "../../public/images/Screenshot10.png";
-import p38 from "../../public/images/Screenshot11.png";
-
-import p39 from "../../public/images/image7.jpg";
-import p40 from "../../public/images/Screenshot12.png";
-import p41 from "../../public/images/Screenshot13.png";
-import p42 from "../../public/images/Screenshot14.png";
-import p43 from "../../public/images/Screenshot15.png";
-import p44 from "../../public/images/Screenshot16.png";
-
-import GA from "../../public/images/GA_logo.jpg";
-import DaysJS from "../../public/images/30DaysJS.jpg";
+import GA      from "../../public/images/GA_logo.jpg";
+import DaysJS  from "../../public/images/30DaysJS.jpg";
 import UMBlogo from "../../public/images/UMBlogo.jpg";
 
-const Projects = (props) => {
-  return (
-    <div className="projects">
-      <br />
-      <br />
-      <div className="flex">
-        <div className="textbox3">
-          <h2><b>DANIEL'S PROJECTS</b></h2>
-          <div class="column">
-            <div class="col s12 m6">
-              <div class="card">
-                <h4>
-                  <a href="https://generalassemb.ly/">
-                    <img
-                      className="GAlogo"
-                      alt="i"
-                      src={GA}
-                      width="75"
-                      height="75"
-                    />
-                  </a>
-                  <br />
-                  General Assembly Projects
-                </h4>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p33}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://triplogapp.herokuapp.com/"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Triplog Django
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{ pathname: "https://github.com/dani888/Triplog" }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  Working with a team of four people to develop a full-stack
-                  Django application. This application allows users to document
-                  and log and details, photos, comments, and share their travels
-                  with the public. Technologies: Django, Python, PostgreSQL,
-                  HTML5, CSS3, JavaScript
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="LinkedUser"
-                  src={p3}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                (Not Mobile friendly just yet) <br />
-                <a
-                  href="https://linked-user.netlify.app"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  React Linked User
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{ pathname: "https://github.com/dani888/Proj3-Frontend" }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  This is a full-stack mini Linked-In replica where users can
-                  sign in and create user card profiles that anyone can search
-                  for and lookup. As a user, you can view other users' profile
-                  cards and come into contact with them. Technologies: React,
-                  HTML5, CSS3, JSX, Firebase, Node, Express, MongoDB
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="Crudclimber"
-                  src={p31}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://crudclimber.herokuapp.com/"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Crud Climber App
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname: "https://github.com/dani888/crud-climber-app",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  This is a full-stack application that allows the user to
-                  register and log in. A user can view all available climbing
-                  courses on the main page as well as create a new climbing
-                  course that other users will see once they log in. Each user
-                  can add any courses they like to their own scheduler page,
-                  where they can keep track of their classes. Technologies:
-                  Node, Express, HTML5, CSS3, MongoDB, JavaScript,
-                  Authentication
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="cardgame"
-                  src={p32}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://card-game-app.netlify.app"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  API Card Game Website
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname: "https://github.com/dani888/Wars-Card-Game-App",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  Creating a web application where you can play the card game
-                  "wars". Using a classic card deck API to render and use the
-                  cards for the game. Technologies: JavaScript, HTML5, CSS3,
-                  JQuery
-                </p>
-                <hr className="lined" />
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="col s12 m6">
-              <div class="card">
-                <h4>
-                  <a href="https://javascript30.com/">
-                    <img
-                      className="GAlogo"
-                      alt="i"
-                      src={DaysJS}
-                      width="75"
-                      height="75"
-                    />
-                  </a>
-                  <br />
-                  30 Day JavaScript projects
-                </h4>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p34}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://30dayjs-drumkit.netlify.app/"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Drum Kit Javascript
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/Javascript-Drum-Kit-01",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  Started the 30DaysJavaScript challenge and for the first
-                  challenge we created simple Drumkit where users can press the
-                  according buttons on thier keyboard to play drum sounds. It's
-                  so much fun! Check it out. Technologies: Javascript, HTML5,
-                  CSS3
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p35}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://codepen.io/Dan808/full/OJxXyYb"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Image Basic Filter JS
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-Varaibles-03",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my third day of 30DaysJavaScript challenge we created a
-                  basic image filter where you can add spacing, background color
-                  and blur the image. Great javascript excercise. Technologies:
-                  Javascript, HTML5, CSS3
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p41}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://codepen.io/Dan808/full/BawzbrN"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Dessert Flex Pannel
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-flex-pannel",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my fifth day of 30DaysJavaScript challenge we worked with
-                  Flex css design to create an image flex panel. Hungry for
-                  Desserts? Technologies: javaScript, HTML, CSS
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p42}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://codepen.io/Dan808/full/rNGjrPW"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  HTML5 Canvas paint brush
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-07painter",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my seventh day of 30DaysJavaScript challenge we create a
-                  HTML5 canvas where you can use your mouse to draw colorful
-                  images. Feel free to try it out! Technologies: HTML CSS
-                  JavaScript
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p43}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://shadow-css-mouse-effect-30dayjs.netlify.app/"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  CSS-Mouse-Effect
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-cssTextshadow",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my Sixteenth day fo 30DaysJavaScript challenge we played
-                  around with mouse css effects. Technologies: HTML CSS
-                  JavaScript
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p44}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                <a
-                  href="https://30dayjs-voice-recognition.netlify.app/"
-                  class="underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Voice Recognition
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-Speech",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my twentieth day fo 30DaysJavaScript challenge we played
-                  around with javascript voice recognition feature.
-                  Technologies: HTML CSS JavaScript
-                </p>
-                <hr className="lined" />
-                <br />
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="col s12 m6">
-              <div class="card">
-                <h4>
-                  <a href="https://www.umb.edu/">
-                    <img
-                      className="GAlogo"
-                      alt="i"
-                      src={UMBlogo}
-                      width="75"
-                      height="75"
-                    />
-                  </a>
-                  <br />
-                  UMass Boston Projects
-                </h4>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p36}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                Software Engineering Group Project
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my computer engineering course at the university of
-                  Massachusetts Boston, my team and I created a student web
-                  portal as part of a group project. The student portal was for
-                  our professor to post projects so that students can log in
-                  vote on which projects they prefer. This tool helped the
-                  Professor to organize students into groups for team projects.
-                  The technology stack: PHP, MySQL, HTML, and CSS.
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p37}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                CrimeForcasting Project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/Crime-Forcasting/tree/master/term%20Project%20Crime%20Forcasting",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my Python course, as a final project we used real live
-                  data about crime occurences from a part of Boston in 2016. We
-                  created a matrix to display our final result. We search for
-                  number cluster and can assume future crimes to appear.
-                  Technologies: Python
-                </p>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p38}
-                  width="200"
-                  height="300"
-                />
-                <br />
-                Pizza Project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{
-                    pathname:
-                      "https://github.com/dani888/cs437/tree/master/pizza2",
-                  }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  For my Database course at UMB. We created a Pizza shop
-                  application. A user would be able to select a size, choose
-                  from many toppings, and order a pizza. Once the customer
-                  orders a pizza, the data would be added to a table displaying
-                  to the user what they ordered and when the pizza is ready.
-                  Technologies: Php, Mysql, JQuery
-                </p>
-                <hr className="lined" />
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="col s12 m6">
-              <div class="card">
-                <h4>
-                  <img
-                    className="GAlogo"
-                    alt="i"
-                    src={p39}
-                    width="75"
-                    height="75"
-                  />
-                  <br />
-                  Personal Projects
-                </h4>
-                <hr className="lined" />
-                <br />
-                <img
-                  className="imgproj"
-                  alt="i"
-                  src={p40}
-                  width="400"
-                  height="300"
-                />
-                <br />
-                Job Finder API&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  to={{ pathname: "https://github.com/dani888/job-finder" }}
-                  target="_blank"
-                >
-                  <Button variant="contained">Github</Button>
-                </Link>
-                <br />
-                <hr className="lined" />
-                <p className="projp">
-                  This is a React application that scrapes Job websites such as
-                  LinkedIn, Glassdoor, and many more. Once it has scraped the
-                  data it will store the data in PostgreSQL database and display
-                  jobs in a nicly formated table for the user to check out jobs
-                  and apply. Technologies: PostgreSQL, React, JavaScript
-                </p>
-                <hr className="lined" />
-                <br />
-              </div>
-            </div>
-          </div>
-          <br />
+/* ── Data ── */
+const categories = [
+  {
+    logo: GA,
+    logoHref: "https://generalassemb.ly/",
+    title: "General Assembly Projects",
+    projects: [
+      {
+        img: p33,
+        name: "Triplog Django",
+        live: null,
+        github: "https://github.com/dani888/Triplog",
+        desc: "Working with a team of four to develop a full-stack Django application. Users can document details, photos, comments, and share their travels with the public.",
+        tech: ["Django", "Python", "PostgreSQL", "HTML5", "CSS3", "JavaScript"],
+      },
+      {
+        img: p3,
+        name: "React Linked User",
+        note: "Not Mobile friendly just yet",
+        live: "https://linked-user.netlify.app",
+        github: "https://github.com/dani888/Proj3-Frontend",
+        desc: "A full-stack mini LinkedIn replica where users can sign in, create profile cards that anyone can search for and look up.",
+        tech: ["React", "HTML5", "CSS3", "JSX", "Firebase", "Node", "Express", "MongoDB"],
+      },
+      {
+        img: p31,
+        name: "Crud Climber App",
+        live: null,
+        github: "https://github.com/dani888/crud-climber-app",
+        desc: "A full-stack app where users can register, log in, view climbing courses, create new courses, and track classes on a personal scheduler.",
+        tech: ["Node", "Express", "HTML5", "CSS3", "MongoDB", "JavaScript", "Auth"],
+      },
+      {
+        img: p32,
+        name: "API Card Game Website",
+        live: "https://card-game-app.netlify.app",
+        github: "https://github.com/dani888/Wars-Card-Game-App",
+        desc: "A web app where you can play the card game \"Wars\" using a classic card deck API to render and play the game.",
+        tech: ["JavaScript", "HTML5", "CSS3", "jQuery"],
+      },
+    ],
+  },
+  {
+    logo: DaysJS,
+    logoHref: "https://javascript30.com/",
+    title: "30 Day JavaScript Projects",
+    projects: [
+      {
+        img: p34,
+        name: "Drum Kit",
+        live: "https://30dayjs-drumkit.netlify.app/",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/Javascript-Drum-Kit-01",
+        desc: "Day 1 — A Drumkit where users press keyboard buttons to play drum sounds.",
+        tech: ["JavaScript", "HTML5", "CSS3"],
+      },
+      {
+        img: p35,
+        name: "Image Basic Filter",
+        live: "https://codepen.io/Dan808/full/OJxXyYb",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-Varaibles-03",
+        desc: "Day 3 — A basic image filter: add spacing, change background color, and blur the image.",
+        tech: ["JavaScript", "HTML5", "CSS3"],
+      },
+      {
+        img: p41,
+        name: "Dessert Flex Panel",
+        live: "https://codepen.io/Dan808/full/BawzbrN",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-flex-pannel",
+        desc: "Day 5 — Flex CSS design to create an image flex panel. Hungry for desserts?",
+        tech: ["JavaScript", "HTML", "CSS"],
+      },
+      {
+        img: p42,
+        name: "HTML5 Canvas Paint Brush",
+        live: "https://codepen.io/Dan808/full/rNGjrPW",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-07painter",
+        desc: "Day 7 — An HTML5 canvas where you can draw colorful images with your mouse.",
+        tech: ["HTML", "CSS", "JavaScript"],
+      },
+      {
+        img: p43,
+        name: "CSS Mouse Effect",
+        live: "https://shadow-css-mouse-effect-30dayjs.netlify.app/",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-cssTextshadow",
+        desc: "Day 16 — Playing around with mouse CSS text-shadow effects.",
+        tech: ["HTML", "CSS", "JavaScript"],
+      },
+      {
+        img: p44,
+        name: "Voice Recognition",
+        live: "https://30dayjs-voice-recognition.netlify.app/",
+        github: "https://github.com/dani888/dani888-30DayJS/tree/master/30DayJs-Speech",
+        desc: "Day 20 — Playing around with the JavaScript Speech Recognition API.",
+        tech: ["HTML", "CSS", "JavaScript"],
+      },
+    ],
+  },
+  {
+    logo: UMBlogo,
+    logoHref: "https://www.umb.edu/",
+    title: "UMass Boston Projects",
+    projects: [
+      {
+        img: p36,
+        name: "Engineering Student Portal",
+        live: null,
+        github: null,
+        desc: "A student portal for a professor to post projects and let students log in and vote on which projects they prefer — used to organize students into groups.",
+        tech: ["PHP", "MySQL", "HTML", "CSS"],
+      },
+      {
+        img: p37,
+        name: "Crime Forecasting",
+        live: null,
+        github: "https://github.com/dani888/Crime-Forcasting/tree/master/term%20Project%20Crime%20Forcasting",
+        desc: "Used real crime occurrence data from Boston in 2016 to create a matrix, search for number clusters, and predict future crime locations.",
+        tech: ["Python"],
+      },
+      {
+        img: p38,
+        name: "Pizza Shop",
+        live: null,
+        github: "https://github.com/dani888/cs437/tree/master/pizza2",
+        desc: "A pizza shop app where users select size and toppings, order, and see their order displayed in a table with an estimated ready time.",
+        tech: ["PHP", "MySQL", "jQuery"],
+      },
+    ],
+  },
+  {
+    logo: p39,
+    logoHref: null,
+    title: "Personal Projects",
+    projects: [
+      {
+        img: p40,
+        name: "Job Finder API",
+        live: null,
+        github: "https://github.com/dani888/job-finder",
+        desc: "A React app that scrapes job sites (LinkedIn, Glassdoor, and more), stores results in PostgreSQL, and displays them in a formatted table.",
+        tech: ["PostgreSQL", "React", "JavaScript"],
+      },
+    ],
+  },
+];
+
+/* ── Sub-components ── */
+const TechBadge = ({ label }) => (
+  <span className="px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs rounded-full font-medium">
+    {label}
+  </span>
+);
+
+const ProjectCard = ({ img, name, note, live, github, desc, tech }) => (
+  <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg
+                  transition-all duration-200 hover:-translate-y-1 flex flex-col h-full">
+    {/* Image */}
+    <div className="h-44 overflow-hidden bg-gray-100 flex-shrink-0">
+      <img src={img} alt={name} className="w-full h-full object-cover" />
+    </div>
+
+    {/* Body */}
+    <div className="p-5 flex flex-col flex-1">
+      <h3 className="font-bold text-gray-900 text-sm mb-1">{name}</h3>
+      {note && (
+        <p className="text-xs text-amber-600 font-medium italic mb-2">{note}</p>
+      )}
+      {/* Description grows to fill available space */}
+      <p className="text-gray-500 text-xs leading-relaxed flex-1">{desc}</p>
+
+      {/* Tech badges */}
+      <div className="flex flex-wrap gap-1.5 mt-3">
+        {tech.map((t) => <TechBadge key={t} label={t} />)}
+      </div>
+
+      {/* Buttons pinned to bottom */}
+      {(live || github) && (
+        <div className="flex gap-2 mt-4">
+          {live && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 text-center py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg
+                         hover:bg-blue-700 transition-colors duration-200"
+            >
+              Live Demo
+            </a>
+          )}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 text-center py-2 bg-gray-800 text-white text-xs font-semibold rounded-lg
+                         hover:bg-gray-900 transition-colors duration-200"
+            >
+              GitHub
+            </a>
+          )}
         </div>
+      )}
+    </div>
+  </div>
+);
+
+const bgProjects =
+  "https://images.unsplash.com/photo-1600132806608-231446b2e7af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80";
+
+/* ── Page ── */
+const Projects = () => {
+  return (
+    <div
+      className="min-h-screen py-16 px-4"
+      style={{
+        backgroundImage: `linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url(${bgProjects})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center 55%",
+      }}
+    >
+      <div className="max-w-6xl mx-auto space-y-16">
+
+        {/* Heading */}
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Daniel's Projects</h1>
+          <div className="w-16 h-1 bg-blue-500 mx-auto mt-3 rounded-full" />
+        </div>
+
+        {/* Categories */}
+        {categories.map(({ logo, logoHref, title, projects }) => (
+          <section key={title}>
+            {/* Category header */}
+            <div className="flex items-center gap-4 mb-8">
+              {logoHref ? (
+                <a href={logoHref} target="_blank" rel="noreferrer">
+                  <img
+                    src={logo}
+                    alt={title}
+                    className="w-12 h-12 rounded-xl object-contain border border-gray-200 bg-white p-1 shadow-sm"
+                  />
+                </a>
+              ) : (
+                <img
+                  src={logo}
+                  alt={title}
+                  className="w-12 h-12 rounded-xl object-cover border border-gray-200 shadow-sm"
+                />
+              )}
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+                <div className="w-8 h-0.5 bg-blue-500 mt-1 rounded-full" />
+              </div>
+            </div>
+
+            {/* Project grid */}
+            <div className={`grid gap-6 items-stretch ${
+              projects.length === 1
+                ? "max-w-sm"
+                : projects.length === 3 || projects.length === 6
+                ? "sm:grid-cols-3"
+                : "sm:grid-cols-2"
+            }`}>
+              {projects.map((proj) => (
+                <ProjectCard key={proj.name} {...proj} />
+              ))}
+            </div>
+          </section>
+        ))}
+
       </div>
     </div>
   );

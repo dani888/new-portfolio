@@ -1,52 +1,68 @@
 import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 
-import JS from "../../public/images/JS_logo.png";
-import HTML from "../../public/images/html_logo.png";
-import CSS from "../../public/images/Css_logo.png";
-import REACT from "../../public/images/React.svg";
-import NODE from "../../public/images/nodejs_logo.png";
+import JS       from "../../public/images/JS_logo.png";
+import HTML     from "../../public/images/html_logo.png";
+import CSS      from "../../public/images/Css_logo.png";
+import REACT    from "../../public/images/React.svg";
+import NODE     from "../../public/images/nodejs_logo.png";
 import DJPython from "../../public/images/Python_logo.png";
-import DJANGO from "../../public/images/django_logo.png";
-import MongoDb from "../../public/images/MongoDB-logo.png";
+import DJANGO   from "../../public/images/django_logo.png";
+import MongoDb  from "../../public/images/MongoDB-logo.png";
 import PostgreSQL from "../../public/images/postgresql.png";
-import material from "../../public/images/materialize.png";
-import firebase from "../../public/images/firebase.png";
-import Git from "../../public/images/Git_logo.png";
-import ts from "../../public/images/typescript_logo.png";
-import tailwind from "../../public/images/tailwind_logo.png";
-import plsql from "../../public/images/plsql_logo.png";
-import jquery from "../../public/images/jquery_logo.png";
+import Material  from "../../public/images/materialize.png";
+import Firebase  from "../../public/images/firebase.png";
+import Git       from "../../public/images/Git_logo.png";
+import TS        from "../../public/images/typescript_logo.png";
+import Tailwind  from "../../public/images/tailwind_logo.png";
+import PLSQL     from "../../public/images/plsql_logo.png";
+import JQuery    from "../../public/images/jquery_logo.png";
 
 import Recommend from "./Recommend";
 
-const Home = (props) => {
+const skills = [
+  { src: JS,         alt: "JavaScript"  },
+  { src: HTML,       alt: "HTML5"       },
+  { src: CSS,        alt: "CSS3"        },
+  { src: REACT,      alt: "React"       },
+  { src: NODE,       alt: "Node.js"     },
+  { src: DJPython,   alt: "Python"      },
+  { src: DJANGO,     alt: "Django"      },
+  { src: MongoDb,    alt: "MongoDB"     },
+  { src: PostgreSQL, alt: "PostgreSQL"  },
+  { src: Material,   alt: "Materialize" },
+  { src: Firebase,   alt: "Firebase"    },
+  { src: Git,        alt: "Git"         },
+  { src: TS,         alt: "TypeScript"  },
+  { src: Tailwind,   alt: "Tailwind CSS"},
+  { src: PLSQL,      alt: "PL/SQL"      },
+  { src: JQuery,     alt: "jQuery"      },
+];
+
+const HeroBackground =
+  "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=2670&auto=format&fit=crop";
+
+const Home = () => {
   return (
     <>
-      <div className="homer">
-        <br />
-        <br />
-        <br />
-        <div className="snowflakes" aria-hidden="true">
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
+      {/* ── Hero Section ── */}
+      <section
+        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(5,15,30,0.65), rgba(5,15,30,0.78)), url(${HeroBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Snowflakes */}
+        <div aria-hidden="true">
+          {["❅","❆","❅","❆","❅","❆","❅","❆","❅","❆","❅","❆"].map((flake, i) => (
+            <span key={i} className="snowflake">{flake}</span>
+          ))}
         </div>
-        <div className="flex">
-          <div className="w3-container w3-center w3-animate-top">
-            <div className="hero-title">
-              <b>Welcome To <span id="colorD">Daniel's</span> Portfolio</b>
-            </div>
-          </div>
+
+        {/* ── Desktop: title + buttons in normal flow (hidden on mobile) ── */}
+        <div className="hidden md:flex flex-col relative z-10 items-center text-center px-8 w-full max-w-5xl">
           <div className="animated-title">
             <div className="text-top">
               <div>
@@ -56,236 +72,123 @@ const Home = (props) => {
             </div>
             <div className="text-bottom">
               <div>
-                “Any sufficiently advanced technology is indistinguishable from
-                magic.” – Arthur C. Clarke
+                "Any sufficiently advanced technology is indistinguishable from magic."
+                <br />– Arthur C. Clarke
               </div>
             </div>
-            <br />
-            <br />
+          </div>
+
+          <div className="flex flex-row gap-4 mt-10 justify-center">
+            <a
+              href="#section2"
+              className="px-8 py-4 rounded-xl border-2 border-white/70 text-white font-bold text-sm tracking-wide
+                         hover:bg-white hover:text-gray-900 transition-all duration-300 text-center backdrop-blur-sm"
+            >
+              Technical Skills
+            </a>
+            <Link
+              to="/projects"
+              className="px-8 py-4 rounded-xl border-2 border-white/70 text-white font-bold text-sm tracking-wide
+                         hover:bg-white hover:text-gray-900 transition-all duration-300 text-center backdrop-blur-sm"
+            >
+              Projects
+            </Link>
+            <a
+              href="#section3"
+              className="px-8 py-4 rounded-xl border-2 border-white/70 text-white font-bold text-sm tracking-wide
+                         hover:bg-white hover:text-gray-900 transition-all duration-300 text-center backdrop-blur-sm"
+            >
+              Recommendations
+            </a>
           </div>
         </div>
-        <Button
-        className="homebut"
-        href="#section2"
-        variant="outlined"
-        size="large"
-        sx={{
-          border: "2px solid black",
-          color: "black",
-          width: "220px",            // increase button width
-          whiteSpace: "normal",      // allow text wrap
-          padding: "10px 20px",
-          "&:hover": {
-            backgroundColor: "#007BFF",
-            color: "white",
-            border: "4px solid #007BFF",
-          },
-          transition: "all 0.3s ease",
+
+        {/* ── Mobile hero layout (hidden on md+) ── */}
+        <div className="md:hidden relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 space-y-6">
+          <p className="text-blue-300 text-sm font-semibold tracking-widest uppercase">Software Engineer</p>
+          <h1 className="text-4xl font-bold text-white leading-tight">
+            Daniel<br />
+            <span className="text-blue-400">Werminghausen</span>
+          </h1>
+          <p className="text-white/70 text-sm italic max-w-xs leading-relaxed">
+            "Any sufficiently advanced technology is indistinguishable from magic."
+            <br /><span className="not-italic text-white/50">– Arthur C. Clarke</span>
+          </p>
+          <div className="flex flex-col w-full max-w-xs gap-3 pt-2">
+            <a
+              href="#section2"
+              className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm tracking-wide
+                         hover:bg-blue-700 transition-colors duration-200 text-center"
+            >
+              Technical Skills
+            </a>
+            <Link
+              to="/projects"
+              className="w-full py-3 rounded-xl border-2 border-white/60 text-white font-semibold text-sm tracking-wide
+                         hover:bg-white/10 transition-colors duration-200 text-center"
+            >
+              Projects
+            </Link>
+            <a
+              href="#section3"
+              className="w-full py-3 rounded-xl border-2 border-white/60 text-white font-semibold text-sm tracking-wide
+                         hover:bg-white/10 transition-colors duration-200 text-center"
+            >
+              Recommendations
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Technical Skills ── */}
+      <section id="section2" className="bg-gray-50 py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-2 tracking-tight">
+            Technical Skills
+          </h2>
+          <div className="w-16 h-1 bg-blue-500 mx-auto mb-12 rounded-full" />
+
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-6 place-items-center">
+              {skills.map(({ src, alt }) => (
+                <div key={alt} className="flex flex-col items-center gap-2 group">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-100 p-2
+                                  group-hover:shadow-md group-hover:border-blue-200 transition-all duration-200">
+                    <img
+                      src={src}
+                      alt={alt}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <span className="text-xs text-gray-500 text-center leading-tight font-medium">{alt}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Recommendations ── */}
+      <section
+        id="section3"
+        className="py-20 px-4"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url(${HeroBackground})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
         }}
       >
-        Technical Skill
-      </Button>
-      <br />
-      <br />
-  <Link to="/projects">
-    <Button
-      className="homebut"
-      variant="outlined"
-      size="large"
-      sx={{
-        border: "2px solid black",
-        color: "black",
-        minWidth: "220px",
-        whiteSpace: "nowrap",
-        padding: "10px 20px",
-        "&:hover": {
-          backgroundColor: "#007BFF",
-          color: "white",
-          border: "4px solid #007BFF",
-        },
-        transition: "all 0.3s ease",
-      }}
-    >
-      Projects
-    </Button>
-  </Link>
-   <br />
-   <br />
-  <Button
-  className="homebut"
-  href="#section3"
-  variant="outlined"
-  size="large"
-  sx={{
-    border: "2px solid black",
-    color: "black",
-    width: "220px",            // keep original width
-    whiteSpace: "normal",      // allow text wrap
-    padding: "10px 20px",
-    "&:hover": {
-      backgroundColor: "#007BFF",
-      color: "white",
-      border: "4px solid #007BFF",
-    },
-    transition: "all 0.3s ease",
-    display: { xs: "none", sm: "inline-flex" }, // hide on xs (phones), show on sm+
-  }}
->
-  Recommendations
-</Button>
-
-  
-      </div>
-      <div className="main" id="section2">
-        <div className="column">
-          <div className="col s12 m6">
-            <div className="card">
-              <h4><b>TECHNICAL SKILLS</b></h4>
-              <img
-                className="imghome"
-                alt="i"
-                src={JS}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={HTML}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={CSS}
-                width="80"
-                height="95"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={REACT}
-                width="100"
-                height="80"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={NODE}
-                width="100"
-                height="80"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghomepy"
-                alt="i"
-                src={DJPython}
-                width="110"
-                height="75"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={DJANGO}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={MongoDb}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={PostgreSQL}
-                width="90"
-                height="95"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={material}
-                width="90"
-                height="95"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={firebase}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={Git}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={ts}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={tailwind}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={plsql}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-              <img
-                className="imghome"
-                alt="i"
-                src={jquery}
-                width="100"
-                height="100"
-              />
-              &nbsp;&nbsp;&nbsp;
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-2 tracking-tight">
+            Recommendations
+          </h2>
+          <div className="w-16 h-1 bg-blue-500 mx-auto mb-4 rounded-full" />
+          <p className="text-center text-gray-500 mb-10 text-sm">Click any name to read the full recommendation</p>
+          <Recommend />
         </div>
-      </div>
-      {/* <br /> */}
-      <div className="column" id="section3">
-        <div className="homer2">
-          {/* <div className="col s12 m6"> */}
-            <div className="card">
-              <h4><b>RECOMMENDATIONS</b></h4>
-              <center>Click to View Recommendations</center>
-              <Recommend />
-            </div>
-          {/* </div> */}
-        </div>
-      </div>
+      </section>
     </>
   );
 };
+
 export default Home;
