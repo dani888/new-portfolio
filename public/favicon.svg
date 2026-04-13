@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <!-- Blue accent bar -->
+  <rect x="8" y="50" width="48" height="4" rx="2" fill="#3b82f6"/>
+  <!-- "DW" initials -->
+  <text
+    x="32"
+    y="44"
+    font-family="Georgia, serif"
+    font-size="28"
+    font-weight="700"
+    fill="#ffffff"
+    text-anchor="middle"
+    letter-spacing="-1"
+  >DW</text>
+</svg>
