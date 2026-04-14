@@ -18,6 +18,7 @@ import GA        from "../../public/images/GA_logo.jpg";
 import DaysJS    from "../../public/images/30DaysJS.jpg";
 import UMBlogo   from "../../public/images/UMBlogo.jpg";
 import air600Img from "../../public/images/600air_screenshot.png";
+import blogImg    from "../../public/images/blog_screenshot.png";
 
 /* ── Data ── */
 const categories = [
@@ -41,6 +42,14 @@ const categories = [
         github: "https://github.com/dani888/job-finder",
         desc: "A React app that scrapes job sites (LinkedIn, Glassdoor, and more), stores results in PostgreSQL, and displays them in a formatted table.",
         tech: ["PostgreSQL", "React", "JavaScript"],
+      },
+      {
+        img: blogImg,
+        name: "The Dev Blog",
+        live: "https://dog-blog8.netlify.app/",
+        github: null,
+        desc: "A full-stack blog platform with real-time comments stored via Firebase, category filtering, and an About page powered by the Giphy API.",
+        tech: ["React", "Firebase", "Giphy API", "SQL", "JavaScript"],
       },
     ],
   },
