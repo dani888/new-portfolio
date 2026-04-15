@@ -17,8 +17,9 @@ import p40  from "../../public/images/Screenshot12.png";
 import GA        from "../../public/images/GA_logo.jpg";
 import DaysJS    from "../../public/images/30DaysJS.jpg";
 import UMBlogo   from "../../public/images/UMBlogo.jpg";
-import air600Img from "../../public/images/600air_screenshot.png";
-import blogImg    from "../../public/images/blog_screenshot.png";
+import air600Img    from "../../public/images/600air_screenshot.png";
+import blogImg       from "../../public/images/blog_screenshot.png";
+import reactLearnImg from "../../public/images/react_learn_screenshot.png";
 
 /* ── Data ── */
 const categories = [
@@ -50,6 +51,14 @@ const categories = [
         github: null,
         desc: "A full-stack blog platform with real-time comments stored via Firebase, category filtering, and an About page powered by the Giphy API.",
         tech: ["React", "Firebase", "Giphy API", "SQL", "JavaScript"],
+      },
+      {
+        img: reactLearnImg,
+        name: "React Learning Hub",
+        live: "https://react80808.netlify.app/",
+        github: "https://github.com/dani888/React-learning",
+        desc: "An interactive app that teaches the fundamentals of React — covering all the essential hooks, Tailwind CSS styling, and Node.js basics.",
+        tech: ["React", "Tailwind CSS", "Node.js", "JavaScript"],
       },
     ],
   },
