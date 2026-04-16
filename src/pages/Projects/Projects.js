@@ -55,7 +55,7 @@ const categories = [
       {
         img: reactLearnImg,
         name: "React Learning Hub",
-        live: "https://react80808.netlify.app/",
+        live: "https://react-learning8088.netlify.app/",
         github: "https://github.com/dani888/React-learning",
         desc: "An interactive app that teaches the fundamentals of React — covering all the essential hooks, Tailwind CSS styling, and Node.js basics.",
         tech: ["React", "Tailwind CSS", "Node.js", "JavaScript"],
